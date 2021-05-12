@@ -8,8 +8,8 @@
   "license": "MIT",
   "dependencies": {
     "@types/app-root-path": "^1.2.4",
-    "@types/babel-core": "^6.25.3",
-    "@types/babel-generator": "^6.25.1",
+    "@types/babel-core": "^6.25.6",
+    "@types/babel-generator": "^6.25.3",
     "babel-traverse": "^6.26.0",
     "babylon": "^6.18.0",
     "@types/node": "^9.3.0",
@@ -22,7 +22,7 @@
     "source-map": "^0.7.3"
   },
   "peerDependencies": {
-    "react-native": ">=0.45.0"
+    "react-native": ">=0.60.0"
   },
   "scripts": {
     "build": "rm -rf dist && tsc",
