@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_map_1 = require("source-map");
+var source_map_1 = require("source-map-js");
 function convertMetroRawSourceMapToStandardSourceMap(map, originalFileName, originalFileContent) {
     var outputMap = new source_map_1.SourceMapGenerator();
     outputMap.setSourceContent(originalFileName, originalFileContent);
@@ -43,9 +43,18 @@ function composeSourceMaps(sourceMap, targetMap, sourceFileName, sourceContent) 
 
     var map = new source_map_1.SourceMapGenerator();
     map.setSourceContent(sourceFileName, sourceContent);
-    console.log(babelConsumer)
-    console.log(typeof babelConsumer)
-    console.log(typeof babelConsumer.eachMapping())
+    console.log('fileName', sourceFileName)
+    
+    try {
+        console.log('consumer', 
+            babelConsumer
+            .then(response => console.log('response', response))
+            .catch(error => console.log('error', error))
+        )
+    } catch(error) {
+        console.log('err', error)
+    }
+    
     babelConsumer.eachMapping(function (_a) {
         var generatedLine = _a.generatedLine, generatedColumn = _a.generatedColumn, originalLine = _a.originalLine, originalColumn = _a.originalColumn, name = _a.name;
         if (originalLine) {

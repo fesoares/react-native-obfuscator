@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_map_1 = require("source-map");
+var source_map_1 = require("source-map-js");
 var semver = require("semver");
 var composeSourceMaps_1 = require("./composeSourceMaps");
 var babylon = require("babylon");

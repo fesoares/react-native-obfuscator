@@ -1,5 +1,5 @@
 import { Node } from "babel-core";
-import { RawSourceMap } from "source-map";
+import { RawSourceMap } from "source-map-js";
 import { MetroRawSourceMap } from "./composeSourceMaps";
 export interface MetroTransformerResult {
     ast?: Node;
