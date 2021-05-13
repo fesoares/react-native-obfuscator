@@ -37,7 +37,7 @@ var sourceDir = path.join(app_root_path_1.path, "src");
 function obfuscatingTransformer(_a) {
     var _b = _a.filter, filter = _b === void 0 ? function (filename) { return filename.startsWith(sourceDir); } : _b, _c = _a.upstreamTransformer, upstreamTransformer = _c === void 0 ? getMetroTransformer_1.getMetroTransformer() : _c, _obfuscatorOptions = _a.obfuscatorOptions, otherOptions = __rest(_a, ["filter", "upstreamTransformer", "obfuscatorOptions"]);
     var callerFilename = getCallerFile_1.getCallerFile();
-    var obfuscatorOptions = __assign({}, _obfuscatorOptions, { sourceMap: false, sourceMapMode: "separate", stringArray: false });
+    var obfuscatorOptions = __assign({}, _obfuscatorOptions, { sourceMap: true, sourceMapMode: "separate", stringArray: false });
     return {
         transform: function (props) {
             var result = upstreamTransformer.transform(props);

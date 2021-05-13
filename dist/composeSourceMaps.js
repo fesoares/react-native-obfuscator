@@ -40,6 +40,8 @@ exports.convertStandardSourceMapToMetroRawSourceMap = convertStandardSourceMapTo
 function composeSourceMaps(sourceMap, targetMap, sourceFileName, sourceContent) {
     var tsConsumer = new source_map_1.SourceMapConsumer(sourceMap); // upstreeam types are wrong
     var babelConsumer = new source_map_1.SourceMapConsumer(targetMap);
+    console.log('targetMap', targetMap);
+    console.log('babelConsumer', babelConsumer);
     var map = new source_map_1.SourceMapGenerator();
     map.setSourceContent(sourceFileName, sourceContent);
     babelConsumer.eachMapping(function (_a) {
