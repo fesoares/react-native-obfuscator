@@ -1,6 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var source_map_1 = require("source-map-js");
+var source_map_1 = require("source-map");
 function convertMetroRawSourceMapToStandardSourceMap(map, originalFileName, originalFileContent) {
     var outputMap = new source_map_1.SourceMapGenerator();
     outputMap.setSourceContent(originalFileName, originalFileContent);
